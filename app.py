@@ -21,7 +21,7 @@ df = load_data()
 # 3. Connect to the AI Brain
 if "GOOGLE_API_KEY" in st.secrets:
     genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
-    model = genai.GenerativeModel('gemini-2.5-flash')
+    model = genai.GenerativeModel('gemini-3.1-flash-lite-preview')
 else:
     st.error("Secret Key not found. Please add GOOGLE_API_KEY to Streamlit Secrets.")
 
